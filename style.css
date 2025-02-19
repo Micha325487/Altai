@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -62,6 +63,10 @@ body {
     text-transform: capitalize;
 }
 
+.nav__link:hover {
+    text-decoration: underline;
+}
+
 .header__menu {
     position: absolute;
     top: 30px;
@@ -80,10 +85,6 @@ body {
 
 .nav__item>span {
     margin: 0 5px;
-}
-
-.nav__link:hover {
-    text-decoration: underline;
 }
 
 .author {
@@ -121,9 +122,8 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(10, 435px);
-    gap: 30px;
-
     grid-auto-flow: dense;
+    gap: 30px;
 }
 
 .gallery__card {
@@ -132,47 +132,13 @@ body {
     height: 100%;
     position: relative;
     z-index: 0;
-    border-radius: 16px;
+    border-radius: 16px; 
 }
 
 .gallery__photo {
     width: 100%;
     border-radius: 16px;
-    object-fit: cover;
-}
-
-.first {
-    grid-row: span 2;
-}
-
-.second {
-    grid-column: span 2;
-}
-
-.forth {
-    grid-row: span 2;
-}
-
-.fifth {
-    grid-column: span 2;
-}
-
-.sixth {
-    grid-column: span 3;
-}
-
-.seventh {
-    grid-column: span 2;
-    grid-row: span 2;
-}
-
-.eleventh {
-    grid-column: span 2;
-}
-
-.twelfth {
-    grid-column: span 3;
-    grid-row: span 3;
+    object-fit: cover;  
 }
 
 .second::after,
@@ -211,6 +177,40 @@ body {
     height: 100%;
 }
 
+.first {
+    grid-row: span 2;
+}
+
+.second {
+    grid-column: span 2;
+}
+
+.forth {
+    grid-row: span 2;
+}
+
+.fifth {
+    grid-column: span 2;
+}
+
+.sixth {
+    grid-column: span 3;
+}
+
+.seventh {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.eleventh {
+    grid-column: span 2;
+}
+
+.twelfth {
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
 .footer {
     width: 100%;
     height: 186px;
@@ -233,7 +233,8 @@ body {
 
     .gallery {
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(9, 489px);
+        grid-template-rows: repeat(9, 486px);
+        padding: 0 30px;
     }
 
     .gallery__card {
@@ -241,7 +242,7 @@ body {
         grid-column: span 2;
     }
 
-    .gallery__card:nth-last-of-type(2n) {
+    .gallery__card:nth-of-type(2n) {
         grid-column: span 1;
     }
 
@@ -276,18 +277,18 @@ body {
         height: 500px;
     }
 
-    .gallery{
+    .gallery {
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 357px);
+        grid-template-rows: repeat(12, 294px);
         padding: 0 30px;
     }
 
-    .gallery__card{
+    .gallery__card {
         grid-row: span 1;
         grid-column: span 1;
     }
 
-    .gallery__card-description{
+    .gallery__card-description {
         font-size: 16px;
     }
 
