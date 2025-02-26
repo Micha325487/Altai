@@ -155,7 +155,13 @@ body {
 .gallery__photo {
     width: 100%;
     border-radius: 16px;
-    object-fit: cover;  
+    object-fit: cover; 
+    filter: blur(1px);
+    transition: .2s; 
+}
+
+.gallery__photo:hover {
+    filter: none;
 }
 
 .second::after,
